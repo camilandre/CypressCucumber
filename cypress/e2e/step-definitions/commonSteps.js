@@ -21,6 +21,10 @@ Then("I check that the url value not contain the text {string}", (urlValue) => {
   commonPage.checkUrlNotValue(urlValue);
 })
 
+When("I check that the url value {string} is {string}", (urlValue, status) => {
+  commonPage.checkUrlValueStatus(status, urlValue);
+})
+
 Given("I check that the element with data test {string} should have the status {string}", (elementDataTest, status) => {
   commonPage.checkElementStateByDataTest(elementDataTest, status);
 })
